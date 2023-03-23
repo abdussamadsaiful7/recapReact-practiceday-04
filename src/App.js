@@ -28,6 +28,10 @@ const gridStyle ={
   
 }
 
+const titleStyle ={
+  textShadow: '3px 3px 3px lightPink',
+}
+
 function Todos (){
   const [Todos, setTodos] = useState([]);
 
@@ -41,7 +45,7 @@ function Todos (){
 
   return(
     <div>
-      <h1> Welcome to Todos Website</h1>
+      <h1 style={ titleStyle}> Welcome to Todos Website</h1>
       <h5>Total Todos list: {Todos.length}</h5>
      <div style={TodoStyle}>
         {
