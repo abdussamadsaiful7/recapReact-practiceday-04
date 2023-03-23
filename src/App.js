@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -10,6 +11,11 @@ function App() {
 }
 
 function Person(props){
+  const [reached, setReached] = useState(1);
+  const boostReached =()=>{
+    const newReached = reached*2;
+    setReached(newReached);
+  }
   
   return(
     <div>
@@ -19,6 +25,8 @@ function Person(props){
       <p>Famous Book: {props.famousBook}</p>
       <p>Famous Poem: {props.famousPoem}</p>
       <p>Honour : {props.honour}</p>
+      <h4>Reached: {reached}</h4>
+      <button onClick={boostReached}>BOOST</button>
 
     </div>
     
