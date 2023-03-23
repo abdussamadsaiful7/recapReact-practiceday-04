@@ -62,7 +62,7 @@ function Todo(props){
    
      <div style={gridStyle}>
       <h4>Title: {props.title}</h4>
-        <p>Completed: {props.completed}</p>
+        <p>Status: {props.completed? "Completed":" not completed"}</p>
         <p>UserId: {props.userId}, ID: {props.id}</p>
      </div>
     
